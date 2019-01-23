@@ -42,7 +42,7 @@
                                 </a>
                             </li>
                             <li class="my-2">
-                                <a href="#" class="nav-link">
+                                <a href="<?php echo site_url().'/web/academics';?>" class="nav-link">
                                     Academics
                                 </a>
                             </li>
@@ -53,7 +53,7 @@
                             </li>
 
                             <li class="mb-2">
-                                <a href="#" class="nav-link">
+                                <a href="<?php echo site_url(). '/web/administration';?>" class="nav-link">
                                     Administration
                                 </a>
                             </li>
