@@ -48,6 +48,12 @@
                             </li>
                             <li class="mb-2">
                                 <a href="#" class="nav-link">
+                                    Activities
+                                </a>
+                            </li>
+
+                            <li class="mb-2">
+                                <a href="#" class="nav-link">
                                     Administration
                                 </a>
                             </li>

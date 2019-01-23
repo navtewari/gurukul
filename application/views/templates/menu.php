@@ -23,11 +23,11 @@
                         </li>
                         
                         <li>
-                            <a href="#" class="<?php if($menu==3){echo 'active';}?>">Academics</a>
+                            <a href="<?php echo site_url().'/web/academics';?>" class="<?php if($menu==3){echo 'active';}?>">Academics</a>
                         </li>
                         
                         <li>
-                            <a href="#" class="<?php if($menu==4){echo 'active';}?>">Administration</a>
+                            <a href="<?php echo site_url(). '/web/administration';?>" class="<?php if($menu==4){echo 'active';}?>">Administration</a>
                         </li>
                         <li>
                             <a href="#" class="<?php if($menu==5){echo 'active';}?>">Finance</a>

@@ -24,28 +24,28 @@ class Web extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    function admission() {
-        $data['pageName'] = 'Admission';
-        $this->load->view('templates/header');
-        $this->load->view('templates/headInnerPage', $data);
-        $this->load->view('admission');
+    function message() {
+        $data['menu']=2;
+        $data['pageName']='Messages';
+        $this->load->view('templates/header');        
+        $this->load->view('message', $data);
         $this->load->view('templates/footer');
     }
 
-    function Achievements() {
-        $data['pageName'] = 'Our Achievements';
-        $this->load->view('templates/header');
-        $this->load->view('templates/headInnerPage', $data);
-        $this->load->view('achievement');
+    function academics() {
+        $data['menu']=3;
+        $data['pageName']='Academics';
+        $this->load->view('templates/header');        
+        $this->load->view('academics', $data);
         $this->load->view('templates/footer');
     }
     
 
-    public function recruiters() {
-        $data['pageName'] = 'Recruiters';
-        $this->load->view('templates/header');
-        $this->load->view('templates/headInnerPage', $data);
-        $this->load->view('recruiters');
+    public function administration() {
+         $data['menu']=4;
+        $data['pageName']='Administration';
+        $this->load->view('templates/header');        
+        $this->load->view('administration', $data);
         $this->load->view('templates/footer');
     }
 

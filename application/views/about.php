@@ -24,6 +24,20 @@
                             <p class="my-4 text-justify">Young children use their senses to explore, investigate and describe their environment and community. They begin to recognize similarities and differences in living things, objects and materials. At Gurukul School, we have meticulously assembled the facilities that help nurture your child's all-round development. In this caring, conducive environment your child will happily respond to and develop in a free and unrestrained manner. </p>
                             <p class="my-4 text-justify">At Gurukul School, we believe in education that exceeds beyond the walls of the classroom, children are provided with opportunities to explore and express their ideas and failings through visual arts, music, drama, dance and sports etc. as they interact with a variety of materials, participate in individual and group activities. In this process, your child do not just kept active but involved, which is sure to aid faster development.
                             </p>
+                            <hr/>
+                            <ul class="social-icons text-center d-flex">
+                            <li>
+                                <a href="<?php echo site_url(). '/web/message'; ?>" style="font-size:1em;">
+                                    Director's Message
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url(). '/web/message'; ?>" style="font-size:1em;">
+                                    Principal's Message
+                                </a>
+                            </li>
+                                
+                        </ul>
                         </div>                        
                     </div>
                 </div>

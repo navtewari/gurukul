@@ -100,7 +100,7 @@
                                     I belong to a Hindi speaking family. While raising my two children and educating them in an English medium school, I could realize the problem being faced by them. This holds true for most of the families in the near vicinity around us ...</p>
                             </div>  
                             <div class="card-footer">
-                                <small class="text-muted"><a href="#"><i class="fa fa-arrow-right"></i> Read More</a></small>
+                                <small class="text-muted"><a href="<?php echo site_url(). '/web/message';?>"><i class="fa fa-arrow-right"></i> Read More</a></small>
                             </div>                           
                         </div> 
                         <div class="card">                            
@@ -110,7 +110,7 @@
                                     Gurukul School is an upcoming institution affiliated to CBSE, New Delhi. The school aims at grooming its children into becoming ideal human beings with equal respect for Indian culture & modern ways of life ...</p>
                             </div>  
                             <div class="card-footer">
-                                <small class="text-muted"><a href="#"><i class="fa fa-arrow-right"></i> Read More</a></small>
+                                <small class="text-muted"><a href="<?php echo site_url(). '/web/message';?>"><i class="fa fa-arrow-right"></i> Read More</a></small>
                             </div>                          
                         </div>                        
                     </div>
