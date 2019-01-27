@@ -19,16 +19,6 @@ class My_model extends CI_Model {
         return $query->result();
     }
 
-    function get_toppers(){
-        $query = $this->db->get('toppers');
-        return $query->result();
-    }
-    
-    function get_profile(){
-        $this->db->order_by('SEQ', 'ASC');
-        $query = $this->db->get('faculty');
-        return $query->result();
-    }
     
     function get_gallery($id) {
         $this->db->select('a.*, b.*');

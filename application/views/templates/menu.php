@@ -37,7 +37,7 @@
                             <a href="#" class="<?php if($menu==6){echo 'active';}?>">Miscellaneous</a>
                         </li>
                         <li>
-                            <a href="#" class="<?php if($menu==7){echo 'active';}?>">Gallery</a>
+                            <a href="<?php echo site_url(). '/web/gallery';?>" class="<?php if($menu==7){echo 'active';}?>">Gallery</a>
                         </li>
                         <li>
                             <a href="<?php echo site_url().'/web/contact';?>" class="<?php if($menu==8){echo 'active';}?>">Contact</a>
