@@ -11,6 +11,7 @@ class Web extends CI_Controller {
 
     function index() {
         $data['menu']=1;
+        $data['news'] = $this->mm->get_most_recent_news();
         $this->load->view('templates/header');
         $this->load->view('index', $data);
         $this->load->view('templates/footer');

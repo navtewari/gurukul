@@ -35,16 +35,7 @@
                             <div class="card-body">                                    	                           
 	                             <div style="margin-top:1em;">
 		                            <div class="vticker">
-		                                <ul>		                                
-		                                    <li>		                                      
-		                                         <p class="card-text">Gurukul Academy came into existence in the year 2015</p>
-	                             					<h7 class="card-title"><span class="fa fa-calendar" aria-hidden="true"></span> Posted: 21/01/2019 By: Admin</h7>		                                        		                                        
-		                                    </li>	
-		                                    <li>		                                      
-		                                         <p class="card-text">Its genesis lies in the joint vision of Sri Jai Kishan Arora & Sri Keval Arora & Mr Grish Prasad Hota & Mr. Satendra Singh.</p>
-	                             					<h7 class="card-title"><span class="fa fa-calendar" aria-hidden="true"></span> Posted: 21/01/2019 By: Admin</h7>		                                        		                                        
-		                                    </li>		                                
-		                                </ul>    
+		                                <?php $this->load->view('templates/news'); ?>    
 		                            </div>
 		                            <div style="float:right;">
 		                                <button class="btn btn-danger up"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>

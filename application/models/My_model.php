@@ -6,19 +6,7 @@ class My_model extends CI_Model {
 	function __construct(){
 		parent::__construct();
 	}
-	function get_most_recent_news() {
-        $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=',date('Y-m-d'));
-        $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=',date('Y-m-d'));
-        //$this->db->where('(SUBSTRING_INDEX(DATE_, "/", -1))>=',(date('Y')));
-        $this->db->order_by('ID', 'desc');
-        $this->db->where('STATUS',1);
-        $query = $this->db->get('newsevents');
-        // Exceptional Handling
-            $this->_db_error();
-        // --------------------
-        return $query->result();
-    }
-
+	
     function get_toppers(){
         $query = $this->db->get('toppers');
         return $query->result();
@@ -64,6 +52,73 @@ class My_model extends CI_Model {
         return $query->result();
     }
 
+    function get_all_news() {
+        $this->db->order_by('ID', 'desc');
+        $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=', date('Y-m-d'));
+        $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=', date('Y-m-d'));
+        $query = $this->db->get('newsevents');
+        // Exceptional Handling
+        $this->_db_error();
+        // --------------------
+        return $query->result();
+    }
+
+    function get_all_news_() {
+        $this->db->where('STATUS', 1);
+        $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=', date('Y-m-d'));
+        $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=', date('Y-m-d'));
+        $this->db->order_by('ID', 'desc');
+        $query = $this->db->get('newsevents');
+        return $query->result();
+    }
+
+    function get_active_news() {
+        $this->db->order_by('ID', 'desc');
+        $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=', date('Y-m-d'));
+        $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=', date('Y-m-d'));
+        $query = $this->db->get('newsevents');
+        // Exceptional Handling
+        $this->_db_error();
+        // --------------------
+        return $query->result();
+    }
+
+    function get_all_active_news() {
+        $data = array('STATUS' => 1);
+        $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=', date('Y-m-d'));
+        $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=', date('Y-m-d'));
+        $this->db->order_by('ID', 'desc');
+        $query = $this->db->get_where('newsevents', $data);
+        // Exceptional Handling
+        $this->_db_error();
+        // --------------------
+        return $query->result();
+    }
+
+    function get_all_inactive_news() {
+        $data = array('STATUS' => 0);
+        //$this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=',date('Y-m-d'));
+        //$this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=',date('%Y-%m-%d'));
+        $this->db->order_by('ID', 'desc');
+        $query = $this->db->get_where('newsevents', $data);
+        // Exceptional Handling
+        $this->_db_error();
+        // --------------------
+        return $query->result();
+    }
+
+    function get_most_recent_news() {
+        $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=', date('Y-m-d'));
+        $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=', date('Y-m-d'));
+        //$this->db->where('(SUBSTRING_INDEX(DATE_, "/", -1))>=',(date('Y')));
+        $this->db->order_by('ID', 'desc');
+        $this->db->where('STATUS', 1);
+        $query = $this->db->get('newsevents');
+        // Exceptional Handling
+        $this->_db_error();
+        // --------------------
+        return $query->result();
+    }
     function _db_error() {
         //exception handling ------------------
         if ($this->db->trans_status() == FALSE) {
