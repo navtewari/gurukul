@@ -72,16 +72,7 @@ class My_model extends CI_Model {
         return $query->result();
     }
 
-    function get_all_news() {
-        $this->db->order_by('ID', 'desc');
-        $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=', date('Y-m-d'));
-        $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=', date('Y-m-d'));
-        $query = $this->db->get('newsevents');
-        // Exceptional Handling
-        $this->_db_error();
-        // --------------------
-        return $query->result();
-    }
+    
 
     function get_active_news() {
         $this->db->order_by('ID', 'desc');
