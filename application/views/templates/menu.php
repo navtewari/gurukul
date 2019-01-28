@@ -34,7 +34,7 @@
                         </li>
                         
                         <li>
-                            <a href="#" class="<?php if($menu==6){echo 'active';}?>">Miscellaneous</a>
+                            <a href="<?php echo site_url(). '/web/miscellaneous'?>" class="<?php if($menu==6){echo 'active';}?>">Miscellaneous</a>
                         </li>                        
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
