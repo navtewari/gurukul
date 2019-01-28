@@ -1,4 +1,4 @@
-<nav class="main-header d-flex">
+<nav class="main-header d-flex" style="z-index:99999999">
                 <div id="brand">
                     <div id="word-mark">
                         <h1>
@@ -35,10 +35,18 @@
                         
                         <li>
                             <a href="#" class="<?php if($menu==6){echo 'active';}?>">Miscellaneous</a>
+                        </li>                        
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Gallery
+                            </a>
+
+                            <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="<?php echo site_url(). '/web/gallery';?>" class="<?php if($menu==7){echo 'active';}?>">Photo Gallery</a>                                
+                                <a class="dropdown-item" href="#">Activities</a>                                
+                            </div>
                         </li>
-                        <li>
-                            <a href="<?php echo site_url(). '/web/gallery';?>" class="<?php if($menu==7){echo 'active';}?>">Gallery</a>
-                        </li>
+                        
                         <li>
                             <a href="<?php echo site_url().'/web/contact';?>" class="<?php if($menu==8){echo 'active';}?>">Contact</a>
                         </li>
