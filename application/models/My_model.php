@@ -6,7 +6,7 @@ class My_model extends CI_Model {
 	function __construct(){
 		parent::__construct();
 	}
-	
+
     function get_toppers(){
         $query = $this->db->get('toppers');
         return $query->result();
@@ -51,7 +51,7 @@ class My_model extends CI_Model {
         $query = $this->db->get('activities');
         return $query->result();
     }
-
+    
     function get_all_news() {
         $this->db->order_by('ID', 'desc');
         $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=', date('Y-m-d'));
@@ -69,6 +69,17 @@ class My_model extends CI_Model {
         $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=', date('Y-m-d'));
         $this->db->order_by('ID', 'desc');
         $query = $this->db->get('newsevents');
+        return $query->result();
+    }
+
+    function get_all_news() {
+        $this->db->order_by('ID', 'desc');
+        $this->db->where('DATE_FORMAT(DATE_START, "%Y-%m-%d")<=', date('Y-m-d'));
+        $this->db->where('DATE_FORMAT(DATE_END, "%Y-%m-%d")>=', date('Y-m-d'));
+        $query = $this->db->get('newsevents');
+        // Exceptional Handling
+        $this->_db_error();
+        // --------------------
         return $query->result();
     }
 

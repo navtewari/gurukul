@@ -68,13 +68,13 @@
                                 </a>
                             </li>
                             <li class="my-2">
-                                <a href="#" class="nav-link">
+                                <a href="<?php echo site_url(). '/web/miscellaneous'?>" class="nav-link">
                                     Miscellaneous
                                 </a>
                             </li>
                             <li class="my-2">
-                                <a href="#" class="nav-link">
-                                    Gallery
+                                <a href="<?php echo site_url(). '/web/gallery';?>" class="nav-link">
+                                    Photo Gallery
                                 </a>
                             </li>
                             <li>

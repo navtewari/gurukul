@@ -43,30 +43,38 @@ class Web extends CI_Controller {
     
 
     public function administration() {
-         $data['menu']=4;
+        $data['menu']=4;
         $data['pageName']='Administration';
         $this->load->view('templates/header');        
         $this->load->view('administration', $data);
         $this->load->view('templates/footer');
     }
 
+    public function miscellaneous() {
+        $data['menu']=6;
+        $data['pageName']='Miscellaneous';
+        $this->load->view('templates/header');        
+        $this->load->view('miscellaneous', $data);
+        $this->load->view('templates/footer');
+    }
+
     public function gallery() {
+        $data['menu']=7;        
         $data['pageName'] = 'Photo Gallery';
         $data['gallery_category'] = $this->mm->get_gallery_category();
 
-        $this->load->view('templates/header');
-        $this->load->view('templates/headInnerPage', $data);
+        $this->load->view('templates/header');        
         $this->load->view('gallery-category', $data);
         $this->load->view('templates/footer');
     }
     
    
     public function gallery_detail($id) {
+        $data['menu']=7;     
         $data['pageName'] = 'Photo Gallery';
         $data['gallery'] = $this->mm->get_gallery($id);
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/headInnerPage', $data);
+        $this->load->view('templates/header');
         $this->load->view('gallery', $data);
         $this->load->view('templates/footer');
     }
