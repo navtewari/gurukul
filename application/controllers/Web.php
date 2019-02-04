@@ -89,10 +89,11 @@ class Web extends CI_Controller {
 
         
     function activities() {
+        $data['menu']=7;
         $this->load->model('my_model', 'wm');
         $data['activity_'] = $this->mm->get_activities();
         if (count($data['activity_']) == 0)
-            redirect('/');
+            redirect('web');
 
         $data['pageName']='Activities';
         $this->load->view('templates/header');        
@@ -103,7 +104,7 @@ class Web extends CI_Controller {
     function uc_() {
         $to_ = 'ttchld@gmail.com';
         $from_ = 'info@teamfreelancers.com';
-        $name_ = 'Hargivind Suyal';
+        $name_ = 'Gurukul Academy, Gularbhoj';
 
         $this->email->from($from_, $name_);
         $this->email->to($to_);

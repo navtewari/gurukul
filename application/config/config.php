@@ -506,8 +506,8 @@ $config['proxy_ips'] = '';
 /*
 Customized Definitions --------------------->>>>>
 */
-define('_SCHOOL_', "Hargovind Suyal, Haldwani");
-define('_SCHOOL_ABREV_', "HS");
+define('_SCHOOL_', "Gurukul Academy, Gularbhoj");
+define('_SCHOOL_ABREV_', "GAG");
 define('ADMIN___', 'http://localhost/dpanel');
 /*
 -------------------------------------------->>>>>

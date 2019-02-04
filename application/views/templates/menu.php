@@ -43,7 +43,7 @@
 
                             <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="<?php echo site_url(). '/web/gallery';?>" class="<?php if($menu==7){echo 'active';}?>">Photo Gallery</a>                                
-                                <a class="dropdown-item" href="#">Activities</a>                                
+                                <a class="dropdown-item" href="<?php echo site_url(). '/web/activities';?>">Activities</a>                       
                             </div>
                         </li>
                         

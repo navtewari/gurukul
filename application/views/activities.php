@@ -1,20 +1,17 @@
-<?php $this->load->view('templates/menu'); ?>          
-<div class="reservation_banner">
-    <div class="main_title"><?php echo $pageName; ?></div>
-    <div class="divider"></div>
-</div>
-</div>
-<!-- Ends Header -->
-<!------------ Start Content ---------------->  
-<div class="main">   
-    <div class="reservation_top">
-        <div class="container">              
-            <div class="row">
-                <div class="col-md-12">
-                    <?php $this->load->view('activities/act'); ?>
-                </div>
-            </div>
-        </div>
-    </div>               
-</div>    
-</div>
+    <body>
+        <!-- mian-content -->
+        <header class="index-banner" id="home">
+            <!-- nav -->
+            <?php $this->load->view('templates/menu');?>
+            <!-- //nav -->
+
+            <!--/banner-->
+            <?php $this->load->view('templates/bannerInner');?>
+            <!--// banner-inner -->
+        </header>
+        <link rel="stylesheet" href="<?PHP echo base_url() . 'assets/css/lightbox.css'; ?>"> 
+        <section class="about py-lg-5 py-md-5 py-3" style="padding-top: 0!important;">
+            <div class="container">    
+                <?php $this->load->view('activities/act'); ?>             
+            </div>            
+        </section>          
